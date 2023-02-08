@@ -1,0 +1,7 @@
+<div>
+  <a routerLink="{{album.id}}" [state]="{album}">
+    {{album.id}} - -- {{album.title}}
+  </a>
+  <button (click)="lift()">Lift</button>
+  <button (click)="detail()">Detail</button>
+</div>

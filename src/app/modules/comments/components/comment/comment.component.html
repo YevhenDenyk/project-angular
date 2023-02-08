@@ -1,0 +1,7 @@
+<div>
+  <a routerLink="{{comment.id}}" [state]="{comment}">
+    {{comment.id}} - -- {{comment.body}}
+  </a>
+  <button (click)="lift()">Lift</button>
+  <button (click)="detail()">Detail</button>
+</div>

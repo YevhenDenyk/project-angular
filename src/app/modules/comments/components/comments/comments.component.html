@@ -1,0 +1,5 @@
+<router-outlet></router-outlet>
+<div *ngIf="comment">
+  {{comment.id}}-- {{comment.email}}
+</div>
+<app-comment *ngFor="let comment of comments" [comment]="comment" (setComment)="setComment($event)"></app-comment>

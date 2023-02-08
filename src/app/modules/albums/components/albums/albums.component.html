@@ -1,0 +1,5 @@
+<router-outlet></router-outlet>
+<div *ngIf="album">
+  {{album.id}} -- {{album.title}}
+</div>
+<app-album *ngFor="let album of albums" [album]="album" (setAlbum)="setAlbum($event)"></app-album>
