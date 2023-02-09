@@ -1,0 +1,17 @@
+.header{
+  background-color: skyblue;
+
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: darkblue;
+  font-family: 'Calibri Light', serif;
+}
+
+.active {
+  color: deeppink;
+}

@@ -1,0 +1,5 @@
+<router-outlet></router-outlet>
+<div *ngIf="user">
+  {{user.id}} --- {{user.phone}}
+</div>
+<app-user *ngFor="let user of users" [user]="user" (setUser)="setUser($event)"></app-user>
