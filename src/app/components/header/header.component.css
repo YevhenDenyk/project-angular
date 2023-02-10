@@ -1,0 +1,16 @@
+.header{
+  height: 100px;
+  background-color: cornflowerblue;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a{
+  text-decoration: none;
+  color: darkblue;
+}
+.active{
+  color: red;
+}
