@@ -6,7 +6,7 @@ import {MainLayoutComponent} from "./layouts/main-layout/main-layout.component";
 const routes: Routes = [
   {
     path: '', component: MainLayoutComponent, children: [
-      {path: '', redirectTo: 'users', pathMatch: "full"},
+      // {path: '', redirectTo: 'users', pathMatch: "full"},
       {path: 'users', loadChildren: () => import('./modules/user/user.module').then(value => value.UserModule)},
       {
         path: 'comments',

@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {Component} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 import {IAlbum} from "../../interfaces/album.interfaces";
-import {AlbumService} from "../../services/album.service";
+
 
 @Component({
   selector: 'app-album-detail',
@@ -11,14 +11,9 @@ import {AlbumService} from "../../services/album.service";
 })
 export class AlbumDetailComponent {
   album: IAlbum
-  constructor(private router:Router, private activatedRoute:ActivatedRoute, private service:AlbumService) {
-    this.activatedRoute.params.subscribe(({id}) => {
-      this.album= this.router.getCurrentNavigation()?.extras.state?.['album']
 
-      if (!this.album) {
-        this.service.getById(id).subscribe(value => this.album = value)
-      }
-    })
+  constructor(private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.data.subscribe(({album}) => this.album = album)
   }
 
 }
