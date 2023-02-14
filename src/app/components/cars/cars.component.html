@@ -1,0 +1,9 @@
+<form [formGroup]="form" >
+  <input type="text" placeholder="brand" formControlName="brand">
+  <input type="text" placeholder="price" formControlName="price">
+  <input type="text" placeholder="year" formControlName="year">
+  <button [disabled]="form.invalid"  (click)="save()"> {{updateCar?'Update':'Save'}} </button>
+</form>
+<hr>
+<app-car *ngFor="let car of cars" [car]="car" (carForUpdate)="carForUpdate($event)" (deleteCar)="deleteCar($event)"></app-car>
+
