@@ -25,7 +25,7 @@ export class CarService {
     return this.httpClient.patch<ICar>(`${urls.cars}/${id}`, car)
   }
 
-  delete(id: number): Observable<any> {
+  delete(id:number): Observable<any>{
     return this.httpClient.delete<any>(`${urls.cars}/${id}`)
   }
 

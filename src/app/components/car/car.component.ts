@@ -1,7 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-
 import {ICar} from "../../interfaces";
-
 
 @Component({
   selector: 'app-car',
@@ -16,13 +14,13 @@ export class CarComponent {
   updateCar = new EventEmitter<ICar>()
 
   @Output()
-  deleteCar =new EventEmitter<number>()
+  deleteCar = new EventEmitter<number>()
 
-  update():void{
+  update(): void {
     this.updateCar.emit(this.car)
   }
 
-  delete():void {
+  delete(): void {
     this.deleteCar.emit(this.car.id)
   }
 }
