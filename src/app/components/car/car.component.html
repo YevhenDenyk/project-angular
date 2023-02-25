@@ -1,0 +1,17 @@
+<div class="card-car">
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Brand: {{car.brand}}
+      </mat-panel-title>
+      <mat-panel-description>
+        Year: {{car.year}} {{panelOpenState ? 'open' : 'closed'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>ID: {{car.id}}</p>
+    <p>Price: {{car.price}}</p>
+    <!--      <button (click)="update()" mat-raised-button color="primary">Update</button>-->
+    <!--      <button (click)="delete()" mat-raised-button color="primary">Delete</button>-->
+  </mat-expansion-panel>
+</div>

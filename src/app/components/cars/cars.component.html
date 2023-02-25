@@ -1,0 +1,6 @@
+<!--<app-car-form (saveCar)="saveCar($event)"></app-car-form>-->
+<div>
+  <mat-accordion>
+    <app-car *ngFor="let car of cars" [car]="car"></app-car>
+  </mat-accordion>
+</div>

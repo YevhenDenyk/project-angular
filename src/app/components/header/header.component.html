@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="tool-bar">
+  <div>My Super Car</div>
+  <div *ngIf="!username;else name" class="tools">
+    <div routerLink="/login" routerLinkActive="active"> Login</div>
+    <div routerLink="/register" routerLinkActive="active"> Register</div>
+  </div>
+</mat-toolbar>
+
+<ng-template #name>
+  <div>
+    {{username }}
+  </div>
+</ng-template>
