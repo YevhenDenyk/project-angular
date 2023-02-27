@@ -23,6 +23,8 @@ import {MatButtonModule} from "@angular/material/button";
 import {MainInterceptor} from "./main.interceptor";
 import {MatExpansionModule} from "@angular/material/expansion";
 import { CarFormComponent } from './components/car-form/car-form.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { CarFormComponent } from './components/car-form/car-form.component';
         MatInputModule,
         MatCardModule,
         MatButtonModule,
-        MatExpansionModule
+        MatExpansionModule,
+        MatPaginatorModule,
+        MatProgressBarModule
     ],
   providers: [
     {

@@ -6,7 +6,7 @@
         Brand: {{car.brand}}
       </mat-panel-title>
       <mat-panel-description>
-        Year: {{car.year}} {{panelOpenState ? 'open' : 'closed'}}
+        <span *ngIf="panelOpenState;else carInfo"></span>
       </mat-panel-description>
     </mat-expansion-panel-header>
     <p>ID: {{car.id}}</p>
@@ -15,3 +15,8 @@
     <!--      <button (click)="delete()" mat-raised-button color="primary">Delete</button>-->
   </mat-expansion-panel>
 </div>
+
+
+<ng-template #carInfo>
+  ID: {{car.id}} Price: {{car.price}} Year: {{car.year}}
+</ng-template>

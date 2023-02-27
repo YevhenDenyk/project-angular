@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
 
       //робимо так, щоб закривалися всі діалоги коли ми переходимо на інші посилання та щоб не збільшувалася кількість одночасно відкритих діалогів
   ngOnInit():void {
-    this.router.events.subscribe(() => {
-      this.matDialog.closeAll();
-    })
+    // this.router.events.subscribe(() => {
+    //   this.matDialog.closeAll();
+    // })
   }
 }
