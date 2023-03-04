@@ -1,0 +1,21 @@
+<mat-expansion-panel (opened)="panelOpenState = true"
+                     (closed)="panelOpenState = false">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Brand: {{car.brand}}
+    </mat-panel-title>
+    <mat-panel-description>
+      <div *ngIf="!panelOpenState; else: template">
+        id: {{car.id}} year: {{car.year}} price: {{car.price}}
+      </div>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <p> id: {{car.id}} </p>
+  <p> year: {{car.year}} </p>
+  <p> price: {{car.price}} </p>
+</mat-expansion-panel>
+
+
+<ng-template #template>
+  <div>Detail</div>
+</ng-template>

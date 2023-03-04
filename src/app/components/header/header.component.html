@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="toolbar">
+    <div>Main Cars</div>
+    <div class="links" *ngIf="!userName;else Name">
+      <div routerLink="/login" routerLinkActive="activeLink" class="link">Login</div>
+      <div routerLink="/register" routerLinkActive="activeLink" class="link">Register</div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<ng-template #Name>
+  <div>
+    {{userName}}
+  </div>
+</ng-template>

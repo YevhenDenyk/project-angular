@@ -1,0 +1,13 @@
+.toolbar {
+  justify-content: space-between;
+}
+.links{
+  display: flex;
+}
+.link{
+  margin: 0 5px;
+  cursor: pointer;
+}
+.activeLink{
+  color: red;
+}

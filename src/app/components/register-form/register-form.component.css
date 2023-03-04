@@ -1,0 +1,7 @@
+.action {
+  display: flex;
+  justify-content: right;
+}
+.title{
+  margin-bottom: 10px;
+}
